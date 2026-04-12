@@ -1,0 +1,270 @@
+.products {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-top: 60px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 60px 60px 40px 60px;
+  border-bottom: 2px solid #050505;
+}
+
+.products-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  letter-spacing: 6px;
+  color: #050505;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.products-eyebrow-line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #050505;
+}
+
+.products-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.85;
+}
+
+.products-title-solid {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 110px;
+  color: #050505;
+  letter-spacing: -2px;
+}
+
+.products-title-ghost {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 110px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #050505;
+  letter-spacing: -2px;
+}
+
+.products-count {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: #050505;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid #050505;
+}
+
+.product-card {
+  text-decoration: none;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.product-card:nth-child(3n) {
+  border-right: none;
+}
+
+.product-card:hover {
+  background-color: #050505;
+}
+
+.product-card-image {
+  height: 260px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .product-card-image {
+  background-color: #111111;
+  border-bottom: 1px solid #333333;
+}
+
+.product-card-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  color: #e5e5e5;
+  line-height: 1;
+  letter-spacing: -2px;
+  transition: color 0.3s ease;
+}
+
+.product-card:hover .product-card-num {
+  color: #222222;
+}
+
+.product-card-info {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card-category {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #555555;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.product-card-stock {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #888888;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.product-card-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: #050505;
+  letter-spacing: 1px;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.product-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.product-card-price {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #050505;
+  transition: color 0.3s ease;
+}
+
+.product-card-arrow {
+  font-size: 18px;
+  color: #050505;
+  transition: color 0.3s ease;
+}
+
+.product-card:hover .product-card-category,
+.product-card:hover .product-card-stock {
+  color: #aaaaaa;
+}
+
+.product-card:hover .product-card-name,
+.product-card:hover .product-card-price,
+.product-card:hover .product-card-arrow {
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .products-header {
+    padding: 50px 40px 30px 40px;
+  }
+
+  .products-title-solid,
+  .products-title-ghost {
+    font-size: 90px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card:nth-child(3n) {
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .product-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .product-card-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-header {
+    padding: 40px 24px 30px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .products-title-solid,
+  .products-title-ghost {
+    font-size: 75px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card:nth-child(3n),
+  .product-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .product-card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-header {
+    padding: 32px 20px 24px 20px;
+  }
+
+  .products-title-solid,
+  .products-title-ghost {
+    font-size: 58px;
+  }
+
+  .product-card-image {
+    height: 150px;
+  }
+
+  .product-card-num {
+    font-size: 60px;
+  }
+
+  .product-card-info {
+    padding: 20px;
+  }
+
+  .product-card-name {
+    font-size: 26px;
+  }
+}

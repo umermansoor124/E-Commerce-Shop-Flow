@@ -1,0 +1,377 @@
+.register {
+  display: flex;
+  height: 100vh;
+  padding-top: 70px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.register-left {
+  width: 50%;
+  height: 100%;
+  background-color: #050505;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+.register-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.register-logo span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 8px;
+  letter-spacing: 6px;
+  color: #888888;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.register-left-mid {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-tag {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #aaaaaa;
+  margin-bottom: 16px;
+}
+
+.register-tag-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #aaaaaa;
+}
+
+.register-solid {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 110px;
+  color: #ffffff;
+  line-height: 0.85;
+  letter-spacing: -2px;
+}
+
+.register-ghost {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 110px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #444444;
+  line-height: 0.85;
+  letter-spacing: -2px;
+}
+
+.register-left-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-step-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #aaaaaa;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-progress-bar {
+  width: 100%;
+  height: 2px;
+  background-color: #222222;
+}
+
+.register-progress-fill {
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.register-tagline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #888888;
+  letter-spacing: 2px;
+}
+
+.register-right {
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px;
+  position: relative;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.register-have-account {
+  align-self: flex-end;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #888888;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.register-have-account:hover {
+  color: #050505;
+}
+
+.register-form-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.register-step {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.register-heading-solid {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 90px;
+  color: #050505;
+  line-height: 0.85;
+  letter-spacing: -2px;
+}
+
+.register-heading-ghost {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 90px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #cccccc;
+  line-height: 0.85;
+  letter-spacing: -2px;
+  margin-bottom: 50px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 16px 0;
+  transition: border-color 0.3s ease;
+}
+
+.register-field label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #888888;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.register-field input {
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #050505;
+  outline: none;
+  width: 100%;
+}
+
+.register-field:focus-within label {
+  color: #050505;
+}
+
+.register-field:focus-within {
+  border-bottom-color: #050505;
+}
+
+.register-btn {
+  margin-top: 40px;
+  padding: 22px;
+  background-color: #050505;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border: 1px solid #050505;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: transparent;
+  color: #050505;
+}
+
+.register-switch {
+  margin-top: 30px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #888888;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.register-switch a {
+  color: #050505;
+  text-decoration: none;
+  position: relative;
+  margin-left: 8px;
+  transition: color 0.3s ease;
+}
+
+.register-switch a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #050505;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.register-switch a:hover::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .register-right {
+    padding: 40px;
+  }
+
+  .register-left {
+    padding: 50px 40px;
+  }
+
+  .register-solid,
+  .register-ghost {
+    font-size: 85px;
+  }
+
+  .register-heading-solid,
+  .register-heading-ghost {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .register-left {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 40px 24px;
+    box-sizing: border-box;
+  }
+
+  .register-solid,
+  .register-ghost {
+    font-size: 80px;
+  }
+
+  .register-right {
+    width: 100%;
+    height: auto;
+    padding: 50px 24px 40px 24px;
+    overflow-y: visible;
+    box-sizing: border-box;
+  }
+
+  .register-have-account {
+    position: static;
+    display: inline-block;
+    margin-bottom: 40px;
+    align-self: flex-start;
+  }
+
+  .register-heading-solid,
+  .register-heading-ghost {
+    font-size: 70px;
+  }
+
+  .register-form-wrap {
+    max-width: 100%;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-left {
+    padding: 32px 20px;
+  }
+
+  .register-solid,
+  .register-ghost {
+    font-size: 62px;
+  }
+
+  .register-right {
+    padding: 40px 20px 32px 20px;
+  }
+
+  .register-heading-solid,
+  .register-heading-ghost {
+    font-size: 56px;
+    margin-bottom: 36px;
+  }
+
+  .register-btn {
+    padding: 18px;
+    font-size: 11px;
+  }
+}
