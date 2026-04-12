@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from '../axios'
 import './Register.css'
 
 function Register() {
@@ -16,23 +17,12 @@ function Register() {
     setError('')
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, password }),
-      })
-
-      const data = await response.json()
-
-      if (response.ok) {
+      const res = await axios.post('/auth/register', { name, email, password })
+      if (res.data) {
         navigate('/login')
-      } else {
-        setError(data.message || 'REGISTRATION FAILED. TRY AGAIN.')
       }
     } catch (err) {
-      setError('SERVER ERROR. CHECK YOUR CONNECTION.')
+      setError(err.response?.data?.message || 'SERVER ERROR. CHECK YOUR CONNECTION.')
     } finally {
       setLoading(false)
     }

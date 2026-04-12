@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from '../axios'
 import './Login.css'
 import { AuthContext } from '../context/AuthContext'
 
@@ -12,37 +13,29 @@ function Login() {
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
+    e.preventDefault()
+    setLoading(true)
+    setError('')
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await axios.post('/auth/login', { email, password })
+      const data = res.data
 
-      const data = await response.json();
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('user', JSON.stringify(data.user))
+      login()
 
-      if (response.ok) {
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
-        login();
-
-        if (data.user.role === 'admin') {
-          console.log("Admin detected!");
-          navigate('/admin/dashboard');
-        } else {
-          navigate('/');
-        }
+      if (data.user.role === 'admin') {
+        navigate('/admin/dashboard')
+      } else {
+        navigate('/')
       }
     } catch (err) {
-      setError('Server error. Check connection.');
+      setError(err.response?.data?.message || 'SERVER ERROR. CHECK CONNECTION.')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <div className='login'>
